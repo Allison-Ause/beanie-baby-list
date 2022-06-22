@@ -17,7 +17,7 @@ export async function getBeanies() {
 }
 
 export async function getBeanie(id) {
-    console.log('firing?');     
+ 
     const response = await client
         .from('beanie_babies')
         .select()

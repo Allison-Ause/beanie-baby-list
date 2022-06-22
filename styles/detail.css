@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(102.7deg, rgb(253, 218, 255) 8.2%, rgb(223, 173, 252) 19.6%, rgb(173, 205, 252) 36.8%, rgb(173, 252, 244) 73.2%, rgb(202, 248, 208) 90.9%);
+}
+
+#beanie-detail {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+#beanie-detail img {
+    height: 500px;
+    border-radius: 5%;
+    border: 8px dotted white;
+}
+
+.intro {
+    font-size: 20px;
+}
