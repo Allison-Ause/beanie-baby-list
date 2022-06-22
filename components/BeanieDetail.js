@@ -1,6 +1,6 @@
 
 export default function createBeanieDetail(root) {
-    console.log(root);
+
     const img = root.querySelector('img');
     const intro = root.querySelector('.intro');
     const theme = root.querySelector('.theme');
