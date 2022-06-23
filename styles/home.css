@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 
 h2 {
     padding: 10px;
     border: 10px solid pink;
     text-align: center;
     background: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 35px;
 }
 
 body {
@@ -20,17 +24,20 @@ body {
 .card {
     border-radius: 10%;
     padding: 5px;
-    margin: 25px;
+    margin: 5px;
     border: 8px dotted pink;
     align-items: center;
     text-align: center;
     background: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 15px;
 
 }
 
 a {
     width: contain;
     height: auto;
+    text-decoration: none;
 }
 
 .card img {
