@@ -3,21 +3,35 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsI
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 
-export async function getBeanies() {
-    const response = await client
+export async function getBeanies(title, astroSign, { start, end }) {
+
+    let query = client
         .from('beanie_babies')
         .select(`
             id,
             title,
             image,
             astroSign
-        `);
+        `,
+        { count: 'exact' });
 
-    return response.data;
+    if (title) {
+        query = query.ilike('title', `%${title}%`);
+    }
+
+    if (astroSign) {
+        query = query.ilike('astroSign', `%${astroSign}%`);
+    }
+
+    query = query.range(start, end);
+
+    const response = await query;
+
+    return response;
 }
 
 export async function getBeanie(id) {
- 
+
     const response = await client
         .from('beanie_babies')
         .select()
