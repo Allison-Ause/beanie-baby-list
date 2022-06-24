@@ -3,7 +3,7 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsI
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 
-export async function getBeanies(title, astroSign) {
+export async function getBeanies(title, astroSign, { start, end }) {
 
     let query = client
         .from('beanie_babies')
@@ -12,7 +12,8 @@ export async function getBeanies(title, astroSign) {
             title,
             image,
             astroSign
-        `);
+        `,
+        { count: 'exact' });
 
     if (title) {
         query = query.ilike('title', `%${title}%`);
@@ -22,9 +23,11 @@ export async function getBeanies(title, astroSign) {
         query = query.ilike('astroSign', `%${astroSign}%`);
     }
 
+    query = query.range(start, end);
+
     const response = await query;
 
-    return response.data;
+    return response;
 }
 
 export async function getBeanie(id) {
