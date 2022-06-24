@@ -28,14 +28,14 @@
         <h2 id="title">Beanies are Besties Waiting to Happen!</h2>
         <div id="form-container">
             <form id="filter">
-                <label>
+                <label  >
                     Name:
-                    <input name="title">
+                    <input type="text" id="name-input" name="title">
                 </label>
 
                 <label>
                     Zodiac Sign:
-                    <select name="astrosign">
+                    <select type="text" id="astro-select" name="astrosign">
                         <option value="">Any Sign</option>
                         <option value="aries">Aries</option>
                         <option value="taurus">Taurus</option>
@@ -53,7 +53,7 @@
                 </label>
 
                 <label>
-                    <button id="button">Find a Friend!</button>
+                    <button id="search-button">Find a Friend!</button>
                 </label>
             </form>
         </div>
@@ -70,7 +70,6 @@
         </section>
     </main>
 
-    <footer>&copy;2022 Aspiring Software Developer</footer>
 
     <script type="module" src="app.js"></script>
 </body>

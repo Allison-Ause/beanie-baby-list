@@ -24,6 +24,7 @@ main {
 }
 
 footer {
+    margin-top: 145px;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -33,4 +34,5 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
+
 }
