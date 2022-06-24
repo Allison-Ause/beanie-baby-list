@@ -27,15 +27,15 @@
     <main>
         <h2 id="title">Beanies are Besties Waiting to Happen!</h2>
         <div id="form-container">
-            <form id="search">
+            <form id="filter">
                 <label>
                     Name:
-                    <input name="name">
+                    <input name="title">
                 </label>
 
                 <label>
                     Zodiac Sign:
-                    <select name="astroSign">
+                    <select name="astrosign">
                         <option value="">Any Sign</option>
                         <option value="aries">Aries</option>
                         <option value="taurus">Taurus</option>
@@ -58,8 +58,14 @@
             </form>
         </div>
 
+        <section id="paging">
+            <button>Previous</button>
+            <span id="page-info"></span>
+            <button>Next</button>
+        </section>
+
         <section>
-            <h2 class="container">Future Pals:</h2>
+            <h2 class="container" id="second-title">Future Pals:</h2>
             <ul id="beanie-list"></ul>
         </section>
     </main>
